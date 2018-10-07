@@ -1,0 +1,44 @@
+.top-menu {
+    z-index: 1;
+    background-color: #0F1B34;
+    padding: 1em 0 1em 0;
+}
+
+.top-links,
+.search-bar {
+    padding: 1em 0 1em 0em;
+    color: #FFFFFF;
+}
+
+.navbar {
+    border-radius: 0px;
+}
+
+.skip-link {
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+.social-footer {
+    background-color: #D3D3D3;
+    padding: 0.2em 0em 0.2em 0em; 
+}
+
+.social-media a.facebook ,
+.social-media a.google-plus ,
+.social-media a.twitter ,
+.social-media a.linkedin ,
+.social-media a.pinterest ,
+.social-media a.rss {
+    border-radius: 20px;
+}
+
+.rpl-footer {
+    background-color: #172B54;
+    padding: 0.2em 0em 0.2em 0em; 
+    border-top:1px solid #202020;
+}
+
+
+
+

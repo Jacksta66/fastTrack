@@ -1,0 +1,23 @@
+name: rpl
+type: theme
+description: Sub theme of zymphonies with our custom css and blocks
+core: 8.x
+libraries:
+  - rpl/global-css
+  - rpl/global-js
+
+# Defines the base theme
+base theme: drupal8_zymphonies_theme
+
+regions:
+  top_links: 'Top Links'
+  search: 'Search'
+  banner: 'Header Banner'
+  primary_menu: 'Primary Menu'
+  breadcrumbs: 'Breadcrumbs'
+  left_sidebar: 'Left Sidebar Menu'
+  content: 'Content'
+  social: 'Social bar links'
+  copyright: 'Copyright Footer'
+  footer_links: 'Footer links'
+

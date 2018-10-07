@@ -1,0 +1,10 @@
+<?php
+
+/**
+ * Implements hook_preprocess_block().
+ */
+function example_preprocess_block(&$variables) {
+
+  //create a variable for the themes base path.
+  $variables['base_path'] = base_path();
+}
