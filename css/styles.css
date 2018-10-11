@@ -53,6 +53,10 @@
     color: black;
 }
 
+#bitnami-banner {
+  display: none;  
+}
+
 
 
 
