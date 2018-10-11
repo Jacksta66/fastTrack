@@ -20,4 +20,5 @@ regions:
   social: 'Social bar links'
   copyright: 'Copyright Footer'
   footer_links: 'Footer links'
+  highlighted: 'Messages'
 

@@ -39,6 +39,21 @@
     border-top:1px solid #202020;
 }
 
+.banner-img {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+.navbar {
+    margin-bottom: 0px;
+}
+
+#edit-keys {
+    color: black;
+}
+
+
 
 
 
