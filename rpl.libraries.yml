@@ -2,6 +2,13 @@ global-css:
   css:
     theme:
       css/styles.css: {}
+      css/banner.css: {}
+      css/filters.css: {}
+      css/footer.css: {}
+      css/main-content.css: {}
+      css/navbar.css: {}
+      css/sidebar.css: {}
+      
       
 global-js:
   js: 

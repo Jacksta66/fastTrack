@@ -1,0 +1,23 @@
+/** navigation menu, top menu and logo styles **/
+
+.top-menu {
+    z-index: 1;
+    background-color: #0F1B34;
+    padding: 1em 0 1em 0;
+}
+
+.top-links,
+.search-bar {
+    padding: 1em 0 1em 0em;
+    color: #FFFFFF;
+}
+
+.navbar {
+    border-radius: 0px;
+}
+
+.skip-link {
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
