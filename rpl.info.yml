@@ -11,7 +11,7 @@ base theme: drupal8_zymphonies_theme
 
 regions:
   top_links: 'Top Links'
-  search: 'Search'
+  top_right: 'Top Right Links'
   banner: 'Header Banner'
   primary_menu: 'Primary Menu'
   breadcrumbs: 'Breadcrumbs'
