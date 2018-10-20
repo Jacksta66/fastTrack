@@ -5,3 +5,15 @@
     height: auto;
     width: 100%;
 }
+
+.banner-img {
+ margin-top: -1.5em; 
+}
+
+/** overide block layout colour **/
+
+.block-region {
+  background-color: #696969;
+  color: #FFF;
+  font-weight: 900; 
+}
