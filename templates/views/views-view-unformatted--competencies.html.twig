@@ -1,0 +1,79 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ *
+ * @ingroup themeable
+ */
+
+#}
+
+<h1>Prior Experience?</h1>
+<h2>You may be eligible to Fast Track. Please select the competencies that you have prior experience for:</h2>
+
+{% if title %}
+  <h3>{{ title }}</h3>
+{% endif %}
+{% for row in rows %}
+  {%
+    set row_classes = [
+      default_row_class ? 'views-row',
+    ]
+  %}
+  <div{{ row.attributes.addClass(row_classes) }}>
+    {{- row.content -}}
+  </div>
+{% endfor %}
+
+<form action="/prior-experience" method="get"><br/> <input value="0" id="totalSelected" name="selected" type="hidden" /> <input id="total" name="total" type="hidden" /><input type="submit" value="Submit" />&nbsp;</form>
+<script>
+window.onload = function() {
+    document.querySelector('.panel-group').id = 'competency';
+
+    // forEach method, could be shipped as part of an Object Literal/Module
+    var forEach = function(array, callback, scope) {
+        for (var i = 0; i < array.length; i++) {
+            callback.call(scope, i, array[i]); // passes back stuff we need
+        }
+    };
+
+    // Usage:
+    // optionally change the scope as final parameter too, like ECMA5
+    var myNodeList = document.querySelectorAll('.panel-title');
+    forEach(myNodeList, function(index, value) {
+
+
+        var x = document.createElement("input");
+        x.setAttribute("type", "checkbox");
+        x.setAttribute("name", "checked");
+        x.setAttribute("value", index);
+        x.setAttribute("onclick", "calc();");
+        myNodeList[index].prepend(x);
+    });
+
+    forEach(myNodeList, function(index, value) {
+        document.getElementById("total").value = Number(index += 1);
+    });
+};
+
+function calc() {
+    document.getElementById("totalSelected").value = (document.querySelectorAll('input[type="checkbox"]:checked').length);
+}
+
+</script>
+
+
+
+
+
