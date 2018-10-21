@@ -24,3 +24,24 @@
 #bitnami-banner {
   display: none;  
 }
+
+#block-rpl-footer{
+    list-style: none;
+}
+#block-rpl-footer li{
+    display: inline;
+    padding: 0 10px;
+}
+
+#block-rpl-footer li a {
+  font-size : 15px;
+  color : white;
+}
+#block-rpl-footer li  {
+ float:right;
+}
+
+
+#block-copyrightfooter {
+  color:white;
+}
