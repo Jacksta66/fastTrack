@@ -1,0 +1,85 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ *
+ * @ingroup themeable
+ */
+
+#}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
+<script src="https://code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
+
+{% if title %}
+  <h3>{{ title }}</h3>
+{% endif %}
+{% for row in rows %}
+  {%
+    set row_classes = [
+      default_row_class ? 'views-row',
+    ]
+  %}
+  <div{{ row.attributes.addClass(row_classes) }}>
+    {{- row.content -}}
+  </div>
+{% endfor %}
+
+<div id="circle"></div>
+	<div class="text-center register-section">
+		<h2>Apply for recognised prior learning</h2><br>
+		<form action="/user/register">
+			<input type="submit" value="Register an Account!">
+		</form>
+	</div>
+
+<script>
+
+let urlParams = new URLSearchParams(window.location.search);
+let selected = urlParams.get('selected');
+let total = urlParams.get('total');
+
+var percent = selected / total;
+var text = percent * 100;
+
+  var circle = $('#circle').circleProgress({
+  value: percent,
+  size: 1000
+});
+
+
+circle.on('circle-animation-progress', function(e, v) {
+  var obj = $(this).data('circle-progress'),
+      ctx = obj.ctx,
+      s = obj.size,
+      sv = (text * v).toFixed() +"%",
+      fill = obj.arcFill;
+	  ctx.save();
+	  ctx.font = "bold " + s / 3.0 + "px sans-serif";
+	  ctx.textAlign = 'center';
+	  ctx.textBaseline = 'middle';
+	  ctx.fillStyle = fill;
+	  ctx.fillText(sv, s / 2, s / 2);
+	  ctx.restore();
+});
+</script>
+
+
+
+
+
+
+
+

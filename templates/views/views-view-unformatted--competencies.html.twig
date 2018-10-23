@@ -36,7 +36,7 @@
   </div>
 {% endfor %}
 
-<form action="/prior-experience" method="get"><br/> <input value="0" id="totalSelected" name="selected" type="hidden" /> <input id="total" name="total" type="hidden" /><input type="submit" value="Submit" />&nbsp;</form>
+<form id="experience-form" action="/prior-experience" method="get"><br/> <input value="0" id="totalSelected" name="selected" type="hidden" /> <input id="total" name="total" type="hidden" /><input type="submit" value="Submit" />&nbsp;</form>
 <script>
 window.onload = function() {
     document.querySelector('.panel-group').id = 'competency';
@@ -65,11 +65,19 @@ window.onload = function() {
     forEach(myNodeList, function(index, value) {
         document.getElementById("total").value = Number(index += 1);
     });
+	
+	var sPath = window.location.pathname;
+	var sPage = sPath.substring(sPath.lastIndexOf('/') + 1);
+
+
+	document.getElementById("experience-form").action="/prior-experience/" + sPage ;
 };
 
 function calc() {
     document.getElementById("totalSelected").value = (document.querySelectorAll('input[type="checkbox"]:checked').length);
 }
+
+
 
 </script>
 

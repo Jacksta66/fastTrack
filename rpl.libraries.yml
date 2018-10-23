@@ -11,5 +11,7 @@ global-css:
       
       
 global-js:
+  header: true
   js: 
     js/global.js: {}   
+    js/polyfill-url.js: {}

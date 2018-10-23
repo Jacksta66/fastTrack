@@ -53,179 +53,169 @@
 #}
 <!-- Wrapper for all content -->
 <div class="wrapper">
-  <!-- Top Menu -->
-  <div class="row">
-    <div class="top-menu col-md-12">
-      <div class="container">
-        <!-- Skip to main content -->
-        <div class="col-md-12">
-          <a href="#main-content" class="visually-hidden focusable skip-link">
-            {{ 'Skip to main content'|t }}
-          </a>
-        </div>
-        <!-- End Skip to main content -->
-
-        <!-- logo -->
-        <div class="col-md-4 col-sm-7 col-xs-9 main-logo"> 
-          <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home" id="logo">
-            <img alt="Canberra Insitute of Technology Fast Track" class="img-responsive logo-img" src="{{ base_path ~ directory }}/images/logo.png"/> 
-          </a>
-        </div>
-        <!-- End Logo -->
-        <!-- Links -->
-        <div class="col-md-4 col-sm-5 col-xs-12 top-links">
-          {% if page.top_links %}        
-          {{ page.top_links }}
-          {% endif %}   
-        </div>
-        <!-- End Links -->
-        <!-- Top Links right -->
-        <div class="col-md-4 col-sm-6 col-xs-12 search-bar">
-          {% if page.top_right %}        
-          {{ page.top_right }}
-          {% endif %}   
-        </div>
-        <!-- End Search -->
-      </div>
-    </div>
-  </div>
-  <!-- End Top Menu -->
-
-  <!--Main Navigation -->
-  <header>
-    <nav class="navbar navbar-inverse" role="navigation">
-      <div class="container">
-        <div class="row">
-          <div class="navbar-header col-md-12">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navigation">
-              <span class="sr-only">Toggle navigation
-              </span>
-              <span class="icon-bar">
-              </span>
-              <span class="icon-bar">
-              </span>
-              <span class="icon-bar">
-              </span>
-            </button>
-          </div>
-
-          <!-- Navigation -->
-          {% if page.primary_menu %}        
-          {{ page.primary_menu }}
-          {% endif %}      
-          <!--End Navigation -->
-
-        </div>
-      </div>
-    </nav>
-      
-  </header>
-  <!--End Main Navigation -->
-
-  <!-- Banner -->
-  <header class="main-banner-wrapper">
-      {% if page.banner %}        
-        {{ page.banner }}
-      {% endif %}  
-  </header>
-  <!-- End Banner -->
-
-  <!--Highlighted Messages. -->
-  {% if page.highlighted %}
-  <div class="container">
+    <!-- Top Menu -->
     <div class="row">
-      <div class="col-md-12">
-        {{ page.highlighted }}
-      </div>
-    </div>
-  </div>
-  {% endif %}
-  <!--End Highlighted-->
+        <div class="top-menu col-md-12">
+            <div class="container">
+                <!-- Skip to main content -->
+                <div class="col-md-12">
+                    <a href="#main-content" class="visually-hidden focusable skip-link">
+                        {{ 'Skip to main content'|t }}
+                    </a>
+                </div>
+                <!-- End Skip to main content -->
 
-  <!-- Main Content / breadcrumbs / sidebar -->
-  <div class="col-md-12" id="main-content">
-    <!-- Bread Crumbs -->
-    <div class="breadcrumbs">
-      <div class="container">
-        {% if page.breadcrumbs %}        
-          {{ page.breadcrumbs }}
-        {% endif %}  
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        {% if page.left_sidebar %}
-        <div class="col-md-4">
-          {{page.left_sidebar}}
-        </div>
-        <div class="col-md-8">
-          {{ page.content }}
-        </div>
-        {% else %}
-        <div class="col-md-12">
-          {{ page.content }}
-        </div>
-        {% endif %}
-      </div>
-    </div>
-  </div> 
-  <!-- End Main content / breadcrumbs / sidebar -->
-
-  <!-- Social Footer -->
-  <div class="col-md-12 social-footer">
-    <div class="container">
-      <div class="row">
-         <div class="col-sm-6 col-md-6">
-          {% if page.social %}        
-            {{ page.social }}
-           {% endif %}
-         </div>
-          <!-- Hide / display icons based on theme settings -->
-          {% if page.socal_media_links %}
-		   <div class="col-sm-6 col-md-6">
-			{{ page.socal_media_links }}
-		   </div>
-           
-           {% endif %}
-              </div>
+                <!-- logo -->
+                <div class="col-md-4 col-sm-7 col-xs-9 main-logo">
+                    <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home" id="logo">
+                        <img alt="Canberra Insitute of Technology Fast Track" class="img-responsive logo-img" src="{{ base_path ~ directory }}/images/logo.png"/>
+                    </a>
+                </div>
+                <!-- End Logo -->
+                <!-- Links -->
+                <div class="col-md-4 col-sm-5 col-xs-12 top-links">
+                    {% if page.top_links %}
+                        {{ page.top_links }}
+                    {% endif %}
+                </div>
+                <!-- End Links -->
+                <!-- Top Links right -->
+                <div class="col-md-4 col-sm-6 col-xs-12 search-bar">
+                    {% if page.top_right %}
+                        {{ page.top_right }}
+                    {% endif %}
+                </div>
+                <!-- End Search -->
             </div>
-      </div>
+        </div>
     </div>
-  </div>
+    <!-- End Top Menu -->
+
+    <!--Main Navigation -->
+    <header>
+        <nav class="navbar navbar-inverse" role="navigation">
+            <div class="container">
+                <div class="row">
+                    <div class="navbar-header col-md-12">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navigation">
+                            <span class="sr-only">Toggle navigation
+                            </span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+
+                    <!-- Navigation -->
+                    {% if page.primary_menu %}
+                        {{ page.primary_menu }}
+                    {% endif %}
+                    <!--End Navigation -->
+
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <!--End Main Navigation -->
+
+    <!-- Banner -->
+    <header class="main-banner-wrapper">
+        {% if page.banner %}
+            {{ page.banner }}
+        {% endif %}
+    </header>
+    <!-- End Banner -->
+
+    <!--Highlighted Messages. -->
+    {% if page.highlighted %}
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    {{ page.highlighted }}
+                </div>
+            </div>
+        </div>
+    {% endif %}
+    <!--End Highlighted-->
+
+    <!-- Main Content / breadcrumbs / sidebar -->
+    <div class="col-md-12" id="main-content">
+        <!-- Bread Crumbs -->
+        <div class="breadcrumbs">
+            <div class="container">
+                {% if page.breadcrumbs %}
+                    {{ page.breadcrumbs }}
+                {% endif %}
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                {% if page.left_sidebar %}
+                    <div class="col-md-4">
+                        {{page.left_sidebar}}
+                    </div>
+                    <div class="col-md-8">
+                        {{ page.content }}
+                    </div>
+                {% else %}
+                    <div class="col-md-12">
+                        {{ page.content }}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <!-- End Main content / breadcrumbs / sidebar -->
+
+    <!-- Social Footer -->
+    <div class="col-md-12 social-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-6">
+                    {% if page.social %}
+                        {{ page.social }}
+                    {% endif %}
+                </div>
+                <!-- Hide / display icons based on theme settings -->
+                {% if page.socal_media_links %}
+                    <div class="col-sm-6 col-md-6">
+                        {{ page.socal_media_links }}
+                    </div>
+
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- End Social Footer -->
 
 <!-- Footer -->
- <div class="col-md-12 rpl-footer">
-  <div class="copyright-rpl">
+<div class="col-md-12 rpl-footer">
+<div class="copyright-rpl">
     <div class="container">
-      <div class="row">
+        <div class="row">
 
-        <!-- Copyright -->
-        <div class="col-sm-4 col-md-4">
-          {% if page.copyright %}        
-            <p>{{page.copyright}}</p>        
-          {% endif %}
+            <!-- Copyright -->
+            <div class="col-sm-4 col-md-4">
+                {% if page.copyright %}
+                    {{page.copyright}}
+                {% endif %}
+            </div>
+            <!-- End Copyright -->
+
+            <!-- Footer Links -->
+            {% if page.footer_links %}
+                <div class="col-sm-8 col-md-8">
+                    {{page.footer_links}}
+                </div>
+            {% endif %}
+            <!-- End Footer Links -->
+
         </div>
-        <!-- End Copyright -->
-
-        <!-- Footer Links -->
-        {% if page.footer_links %}
-          <div class="col-sm-8 col-md-8">
-            {{page.footer_links}}
-          </div>
-        {% endif %}
-        <!-- End Footer Links -->
-        
-      </div>
     </div>
-  </div>
+</div>
 </div>
 <!-- End Footer -->
-
-
-</div> 
 <!-- End wrapper -->
-
-
-
-
