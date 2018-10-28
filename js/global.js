@@ -24,3 +24,20 @@
     });
   });
 })([Element.prototype, Document.prototype, DocumentFragment.prototype]);
+
+
+// allow year and month selection in the datepicker
+(function($) {
+  var datePicker = document.getElementById("edit-field-date-0-value");
+  if (datePicker) {
+      Drupal.behaviors.alterDatePicker = {
+
+          attach: function(context, settings) {
+              $.datepicker._defaults.changeMonth = true;
+              $.datepicker._defaults.changeYear = true;
+
+          }
+      };
+  }
+
+})(jQuery);

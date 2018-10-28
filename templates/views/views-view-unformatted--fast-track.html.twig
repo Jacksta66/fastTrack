@@ -19,9 +19,7 @@
 
 #}
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
-<script src="https://code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
+
 
 {% if title %}
   <h3>{{ title }}</h3>
@@ -47,18 +45,20 @@
 
 <script>
 
-let urlParams = new URLSearchParams(window.location.search);
-let selected = urlParams.get('selected');
-let total = urlParams.get('total');
+(function ($, Drupal) {
 
-var percent = selected / total;
-var text = percent * 100;
+  'use strict';
+  let urlParams = new URLSearchParams(window.location.search);
+  let selected = urlParams.get('selected');
+  let total = urlParams.get('total');
+
+  var percent = selected / total;
+  var text = percent * 100;
 
   var circle = $('#circle').circleProgress({
-  value: percent,
-  size: 1000
-});
-
+    value: percent,
+    size: 1000
+  });
 
 circle.on('circle-animation-progress', function(e, v) {
   var obj = $(this).data('circle-progress'),
@@ -74,6 +74,10 @@ circle.on('circle-animation-progress', function(e, v) {
 	  ctx.fillText(sv, s / 2, s / 2);
 	  ctx.restore();
 });
+
+})(jQuery, Drupal);
+
+
 </script>
 
 

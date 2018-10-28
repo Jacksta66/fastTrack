@@ -15,3 +15,12 @@ global-js:
   js: 
     js/global.js: {}   
     js/polyfill-url.js: {}
+    js/jquery-ui.js: {}
+    js/circle.js: {}
+  dependencies:
+    - core/matchmedia
+    - core/jquery
+    - core/drupal
+    - core/jquery.once
+    - core/drupal.debounce
+    - core/collapse
