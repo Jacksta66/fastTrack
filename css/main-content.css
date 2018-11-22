@@ -95,3 +95,273 @@
 }
 
 
+.region-primary-menu {
+ float: left; 
+}
+
+input[name="checked"] { 
+margin-right: 0.6em;
+}
+
+.register-section {
+  margin-top: -100px;
+  margin-bottom: 2em;
+}
+
+.fast-track-top-heading {
+  margin-bottom: -100px;
+}
+
+#circle {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  text-align: center;
+  margin: 150px auto;
+}
+
+#circle canvas {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.copyright-text {
+   padding-top: 0.7em; 
+}
+
+.region.region-content {
+   min-height: 650px; 
+}
+
+.panel.panel-default {
+     margin-bottom: 0.5em;
+}
+.panel-default>.panel-heading {
+    background-color: #008cbd;
+    color: #fff;
+    padding: 1.5em;
+}
+
+
+.panel-title {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.panel-body {
+    background-color: #F2F2F2;
+}
+
+.panel-heading .accordion-toggle:after {
+    color: #FFF;         
+}
+
+.panel-collapse.collapse.in {
+     -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+     box-shadow: 0 10px 6px -6px #777;  
+}
+.panel-body {
+   font-size: 20px; 
+}
+
+@media only screen and (max-width: 600px) {
+.course-text {
+	font-size: 16px;  
+}
+}
+
+
+h1 {
+  font-size: 34px;
+}
+
+
+
+td, th {
+   padding: 15px; 
+}
+
+.link.tabledrag-toggle-weight {
+  display: none;
+}
+
+.messages.messages--status {
+ display: none; 
+}
+
+.delete-submission a {
+   color: red; 
+}
+
+.messages--warning {
+   display: none; 
+}
+
+.csv-feed .feed-icon {
+    background-image: url(/sites/default/files/styles/medium/public/2018-11/report_0.png?itok=5avjTbgM);
+    width: 200px;
+    height: auto;
+    z-index: 1;
+    display: block;
+    position: relative;
+    color: transparent;
+    border-radius: 20px;
+    margin-left: 33%;
+}
+.views-data-export-feed {
+    display: block;
+    position: relative;
+}
+
+.form-required:after {
+    background-image: none;
+}
+
+.social-media a.insta {
+ color: #fff;
+ background: #d6249f;
+ background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+ border-radius: 20px; 
+}
+
+.social-media a.youtube {
+    background-color: red;
+    border-radius: 20px;
+}
+
+.card {
+	max-width: 400px;
+	background-color: white;
+	box-shadow: 0px 5px 20px #555;
+	margin-top: 2em;
+	min-height: 685px;
+    border-radius: 12px;
+}
+.card-image {
+	height: 250px;
+	position: relative;
+	overflow: hidden;
+}
+.card-image img {
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+    height: 100%;
+}
+.card-body {
+	text-align: center;
+	padding: 15px 20px;
+	box-sizing: border-box;
+	font-size: 18px
+}
+.card-title {
+	text-align: center;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+.card-exceprt {
+	color: #777;
+}
+.upload:after {
+	content: "\f093";
+    font-family: FontAwesome;
+	margin-left: 0.5em;
+}
+.skills-rec:after {
+	content: "\f02d";
+    font-family: FontAwesome;
+	margin-left: 0.5em;
+}
+
+#edit-self-evaluation-evidence-items-0-tasks-other {
+ max-width: 280px; 
+}
+
+.panel-default>.panel-heading.competency-form {
+    color: #333;
+    background-color: #f5f5f5;
+    border-color: #ddd;
+}
+
+.panel-default>.panel-heading.competency-form:hover {
+        background-color: #ccc;
+}
+
+.panel-title.competency-form {
+    font-size: 18px;
+}
+
+.panel-body.competency-form {
+    background-color: transparent;
+}
+
+.panel-title.competency-form>a:hover,
+.panel-title.competency-form>a:focus {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* CSS for plus/minus on form panels */
+.panel-heading.competency-form .accordion-toggle:after {
+    /* symbol for "opening" panels */
+    font-family: FontAwesome;  
+    content: "\f068";    
+    float: right;       
+    color: #333;         
+}
+.panel-heading.competency-form .accordion-toggle.collapsed:after {
+    /* symbol for "collapsed" panels */
+    content: "\f067";    
+}
+
+h2, h3, h4 {
+ font-weight: 600; 
+}
+
+h2 {
+ font-size: 24px; 
+}
+
+h3 {
+ font-size: 20px; 
+}
+
+p {
+ font-size: 18px; 
+}
+
+.course-text-home {
+ font-size: 14px; 
+  
+}
+
+.skill-recognition-panel .panel-title{
+  color:black;
+   font-size: larger;
+ font-weight: bolder;
+}
+.skill-recognition-panel .panel-heading{
+  	background-color: lightgrey  ;
+  	border-radius:unset;
+}
+.skill-recognition-panel .panel-default{
+    border-left-width: thick;
+    border-left-color: darkorange;
+}
+
+.skill-recognition-panel .panel-heading a:hover,
+.skill-recognition-panel .panel-heading a:focus {
+  color: white ;
+}
+
+.panel.panel-default.competency-form {
+    border-left-width: thick;
+    border-left-color: darkorange; 
+}
+
+
+
+
